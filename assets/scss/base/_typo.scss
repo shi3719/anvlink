@@ -4,10 +4,6 @@
     font-size: 12px;
     line-height: 185%;
     font-weight: 400;
-
-    @include tablet{
-        font-size: 26px;
-    }
 }
 .regCaption{
     @include regCaption;
@@ -18,10 +14,6 @@
     font-size: 14px;
     line-height: 185%;
     font-weight: 500;
-
-    @include tablet{
-        font-size: 26px;
-    }
 }
 .regSmallP{
     @include regSmallP;
@@ -63,10 +55,6 @@
     font-size: 14px;
     line-height: 185%;
     font-weight: 600;
-
-    @include tablet{
-        font-size: 26px;
-    }
 }
 .medSmallP{
     @include medSmallP;
@@ -77,10 +65,6 @@
     font-size: 18px;
     line-height: 140%;
     font-weight: 600;
-
-    @include tablet{
-        font-size: 32px;
-    }
 }
 .medbigP{
     @include medbigP;
@@ -91,10 +75,6 @@
     font-size: 20px;
     line-height: 140%;
     font-weight: 600;
-
-    @include tablet{
-        font-size: 34px;
-    }
 }
 .medBigerP{
     @include medBigerP;
@@ -127,10 +107,6 @@
     font-size: 16px;
     line-height: 140%;
     font-weight: 700;
-
-    @include tablet{
-        font-size: 30px;
-    }
 }
 .boldP{
     @include boldP;
@@ -141,10 +117,6 @@
     font-size: 18px;
     line-height: 140%;
     font-weight: 700;
-
-    @include tablet{
-        font-size: 32px;
-    }
 }
 .boldBigP{
     @include boldBigP;
@@ -155,10 +127,6 @@
     font-size: 20px;
     line-height: 140%;
     font-weight: 700;
-
-    @include tablet{
-        font-size: 34px;
-    }
 }
 .boldBigerP{
     @include boldBigerP;

@@ -16,6 +16,10 @@
     transition: all .4s ease-in-out;
 }
 
+@mixin transition08{
+    transition: all .8s ease-in-out;
+}
+
 //background
 @mixin bgCover{
     background-position: center;

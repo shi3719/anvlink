@@ -10,10 +10,6 @@
   box-sizing: border-box;
 }
 
-.off {
-  display: none !important;
-}
-
 @media (min-width: 720px) {
   .web_none {
     display: none;
@@ -45,22 +41,12 @@ br::selection {
   line-height: 185%;
   font-weight: 400;
 }
-@media (min-width: 720px) {
-  .regCaption {
-    font-size: 26px;
-  }
-}
 
 .regSmallP {
   font-family: "futura-pt", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: 14px;
   line-height: 185%;
   font-weight: 500;
-}
-@media (min-width: 720px) {
-  .regSmallP {
-    font-size: 26px;
-  }
 }
 
 .regP {
@@ -90,11 +76,6 @@ br::selection {
   line-height: 185%;
   font-weight: 600;
 }
-@media (min-width: 720px) {
-  .medSmallP {
-    font-size: 26px;
-  }
-}
 
 .medbigP {
   font-family: "futura-pt", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -102,22 +83,12 @@ br::selection {
   line-height: 140%;
   font-weight: 600;
 }
-@media (min-width: 720px) {
-  .medbigP {
-    font-size: 32px;
-  }
-}
 
 .medBigerP {
   font-family: "futura-pt", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: 20px;
   line-height: 140%;
   font-weight: 600;
-}
-@media (min-width: 720px) {
-  .medBigerP {
-    font-size: 34px;
-  }
 }
 
 .boldCaption {
@@ -140,11 +111,6 @@ br::selection {
   line-height: 140%;
   font-weight: 700;
 }
-@media (min-width: 720px) {
-  .boldP {
-    font-size: 30px;
-  }
-}
 
 .boldBigP {
   font-family: "futura-pt", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -152,22 +118,12 @@ br::selection {
   line-height: 140%;
   font-weight: 700;
 }
-@media (min-width: 720px) {
-  .boldBigP {
-    font-size: 32px;
-  }
-}
 
 .boldBigerP {
   font-family: "futura-pt", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: 20px;
   line-height: 140%;
   font-weight: 700;
-}
-@media (min-width: 720px) {
-  .boldBigerP {
-    font-size: 34px;
-  }
 }
 
 .center {
@@ -275,6 +231,7 @@ br::selection {
 
 .header img {
   width: 18%;
+  max-width: 140px;
   margin: 20px 0 0 25px;
 }
 
@@ -287,6 +244,7 @@ br::selection {
 }
 .original img {
   width: 40%;
+  max-width: 160px;
   margin-bottom: 16px;
 }
 .original .btn {
@@ -302,6 +260,7 @@ br::selection {
 
 .partner_wrap {
   width: calc(100% - 40px);
+  max-width: 500px;
   margin: 0 auto;
   padding-bottom: 40px;
 }
@@ -338,17 +297,49 @@ footer p {
 
 .footer_wrap {
   width: calc(100% - 40px);
+  max-width: 500px;
   margin: 0 auto;
   margin-bottom: 50px;
 }
 .footer_wrap .arrow {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .footer_wrap.on .text {
-  display: flex;
+  animation-name: text;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes text {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 100px;
+    opacity: 1;
+  }
 }
 .footer_wrap.on .arrow {
   transform: rotate(180deg);
+}
+.footer_wrap.off .text {
+  animation-name: text-reverse;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes text-reverse {
+  from {
+    max-height: 100px;
+    opacity: 1;
+  }
+  to {
+    max-height: 0;
+    opacity: 0;
+  }
 }
 .footer_wrap .title {
   display: flex;
@@ -365,8 +356,9 @@ footer p {
 .footer_wrap .text {
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 5px;
-  display: none;
+  padding-bottom: 5px;
+  max-height: 0;
+  overflow: hidden;
 }
 .footer_wrap .text p {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -378,7 +370,7 @@ footer p {
   opacity: 0.8;
 }
 .footer_wrap .text.spacing {
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .animation {
@@ -388,6 +380,7 @@ footer p {
   top: 0;
   left: 0;
   pointer-events: none;
+  z-index: 100;
 }
 .animation .simbol {
   width: 80px;
@@ -397,4 +390,56 @@ footer p {
   background-image: url(/assets/images/simbol.png);
   background-position: center;
   background-size: cover;
+  animation-name: simbol;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+@keyframes simbol {
+  from {
+    top: 10%;
+    left: 0;
+    transform: rotate(0deg);
+  }
+  12% {
+    top: 35%;
+    left: calc(100% - 80px);
+    transform: rotate(50deg);
+  }
+  25% {
+    top: 70%;
+    left: 0;
+    transform: rotate(100deg);
+  }
+  37% {
+    top: calc(100% - 80px);
+    left: 70%;
+    transform: rotate(150deg);
+  }
+  50% {
+    top: 60%;
+    left: calc(100% - 80px);
+    transform: rotate(200deg);
+  }
+  62% {
+    top: 0;
+    left: 20%;
+    transform: rotate(150deg);
+  }
+  75% {
+    top: 30%;
+    left: 0;
+    transform: rotate(100deg);
+  }
+  87% {
+    top: 60%;
+    left: calc(100% - 80px);
+    transform: rotate(50deg);
+  }
+  to {
+    top: 10%;
+    left: 0;
+    transform: rotate(0deg);
+  }
 }/*# sourceMappingURL=main.css.map */
