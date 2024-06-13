@@ -1,0 +1,10 @@
+.arrow{
+    width: 24px;
+    height: 24px;
+    background-color: $white;
+    content: '';
+    mask: url(/assets/images/arrow.svg) no-repeat center/contain;
+    -webkit-mask: url(/assets/images/arrow.svg) no-repeat center/contain;
+    
+    cursor: pointer;
+}

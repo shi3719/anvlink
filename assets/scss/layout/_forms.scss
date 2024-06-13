@@ -1,0 +1,138 @@
+.main{
+    width: 100%;
+    background-image: url(/assets/images/bg.png);
+    @include bgCover;
+}
+
+.header{
+    img{
+        width: 18%;
+        margin: 20px 0 0 25px;
+    }
+}
+
+.original{
+    @include flex_center;
+    flex-direction: column;
+    margin: 70px auto 80px auto;
+
+    img{
+        width: 40%;
+        margin-bottom: 16px;
+    }
+    .btn{
+        padding: 12px 40px;
+        background-color: $black;
+        color: $white;
+        border-radius: 100px;
+        @include boldSmallP
+    }
+}
+
+.partner_wrap{
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.partner{
+    background-color: $white;
+    border-radius: 5px;
+    padding: 12px;
+    @include flex_start;
+    align-items: center;
+    box-shadow: 2px 2px 22px rgba($color: $primary, $alpha: 0.11);
+    margin-bottom: 12px;
+
+    .partnerlogo{
+        width: 50px;
+        height: 50px;
+        @include bgCover;
+        margin-right: 15px;
+    }
+
+    .regCaption{
+        color: $darkGray;
+        margin-top: 1px;
+    }
+}
+
+footer{
+    padding: 35px 0;
+    background-color: $black;
+    p{
+        color: $white;
+    }
+}
+
+.footer_wrap{
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    .arrow{
+        @include transition02;
+    }
+
+    &.on{
+        .text{
+            display: flex;
+        }
+        .arrow{
+            transform: rotate(180deg)
+        }
+    }
+
+    .title{
+        @include flex_between_center;
+        p{
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+    .text{
+        @include flex_start;
+        margin-bottom: 5px;
+        display: none;
+
+        p{
+            font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+        }
+
+        p:first-child{
+            margin-right: 8px;
+        }
+
+        .regCaption{
+            opacity: 0.8;
+        }
+
+        &.spacing{
+            margin-top: 20px;
+        }
+    }
+}
+
+.animation{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events : none;
+
+    .simbol{
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        border-radius: 100%;
+        background-image: url(/assets/images/simbol.png);
+        @include bgCover
+    }
+}

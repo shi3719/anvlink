@@ -1,0 +1,170 @@
+//reg
+@mixin regCaption {
+    font-family: "futura-pt","Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 12px;
+    line-height: 185%;
+    font-weight: 400;
+
+    @include tablet{
+        font-size: 26px;
+    }
+}
+.regCaption{
+    @include regCaption;
+}
+
+@mixin regSmallP {
+    font-family: "futura-pt", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 14px;
+    line-height: 185%;
+    font-weight: 500;
+
+    @include tablet{
+        font-size: 26px;
+    }
+}
+.regSmallP{
+    @include regSmallP;
+}
+
+@mixin regP {
+    font-family: "futura-pt", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 500;
+}
+.regP{
+    @include regP;
+}
+
+@mixin regbigP {
+    font-family: "futura-pt", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 500;
+}
+.regbigP{
+    @include regbigP;
+}
+
+//med
+@mixin medCaption {
+    font-family: "futura-pt", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 12px;
+    line-height: 185%;
+    font-weight: 600;
+}
+.medCaption{
+    @include medCaption;
+}
+
+@mixin medSmallP {
+    font-family: "futura-pt", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 14px;
+    line-height: 185%;
+    font-weight: 600;
+
+    @include tablet{
+        font-size: 26px;
+    }
+}
+.medSmallP{
+    @include medSmallP;
+}
+
+@mixin medbigP {
+    font-family: "futura-pt", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 600;
+
+    @include tablet{
+        font-size: 32px;
+    }
+}
+.medbigP{
+    @include medbigP;
+}
+
+@mixin medBigerP {
+    font-family: "futura-pt", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 600;
+
+    @include tablet{
+        font-size: 34px;
+    }
+}
+.medBigerP{
+    @include medBigerP;
+}
+
+//bold
+
+@mixin boldCaption {
+    font-family: "futura-pt", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 12px;
+    line-height: 185%;
+    font-weight: 700;
+}
+.boldCaption{
+    @include boldCaption;
+}
+
+@mixin boldSmallP {
+    font-family: "futura-pt", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 14px;
+    line-height: 185%;
+    font-weight: 700;
+}
+.boldSmallP{
+    @include boldSmallP;
+}
+
+@mixin boldP {
+    ffont-family: "futura-pt", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 700;
+
+    @include tablet{
+        font-size: 30px;
+    }
+}
+.boldP{
+    @include boldP;
+}
+
+@mixin boldBigP {
+    font-family: "futura-pt", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 700;
+
+    @include tablet{
+        font-size: 32px;
+    }
+}
+.boldBigP{
+    @include boldBigP;
+}
+
+@mixin boldBigerP {
+    font-family: "futura-pt", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 700;
+
+    @include tablet{
+        font-size: 34px;
+    }
+}
+.boldBigerP{
+    @include boldBigerP;
+}
+
+
+.center{
+    text-align: center;
+}
