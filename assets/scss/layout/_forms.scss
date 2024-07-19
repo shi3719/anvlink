@@ -15,7 +15,7 @@
 .original {
     @include flex_center;
     flex-direction: column;
-    margin: 70px auto 80px auto;
+    margin: 70px auto;
 
     img {
         width: 40%;
@@ -37,6 +37,17 @@
     max-width: 500px;
     margin: 0 auto;
     padding-bottom: 40px;
+
+    .tag {
+        padding: 0 7px 3px 7px;
+        border-radius: 2px;
+        background-color: #D45327;
+        color: #fff;
+        display: inline-block;
+        margin-bottom: 5px;
+        font-size: 12px;
+        transform: translateY(-3px);
+    }
 }
 
 .partner {
@@ -59,6 +70,28 @@
         color: $darkGray;
         margin-top: 1px;
     }
+
+    &.event{
+        animation-name: updown;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        box-shadow: 2px 2px 22px rgba($color: $primary, $alpha: 0.21);
+    }
+}
+
+@keyframes updown {
+    from{
+        transform: translateY(0px);
+    }
+    
+    50%{
+        transform: translateY(-4px);
+    }
+
+    to{
+        transform: translateY(0px);
+    }
+    
 }
 
 footer {
@@ -215,7 +248,7 @@ footer {
             transform: rotate(150deg);
         }
 
-        50%{
+        50% {
             top: 60%;
             left: calc(100% - 80px);
             transform: rotate(200deg);
@@ -227,7 +260,7 @@ footer {
             transform: rotate(150deg);
         }
 
-        75%{
+        75% {
             top: 30%;
             left: 0;
             transform: rotate(100deg);
